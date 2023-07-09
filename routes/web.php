@@ -21,3 +21,5 @@ use App\Http\Controllers\PostController;
 Route::get('/', [PostController::class,'index']);
 
 Route::get('/about', [PostController::class, 'about'])->name('posts.show');
+
+Route::get('/contact', [PostController::class, 'contact'])->name('posts.contact');
