@@ -1,0 +1,59 @@
+/* トップロゴのサイズ調整 */
+#toplogo{
+  width: 400px;
+  /* opacity: 0.7; */
+  margin: 10px;
+}
+
+/* nav調整 */
+.nav {
+  background-color: rgb(168, 236, 236);
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+}
+nav  a {
+  padding: 0 30px;
+  color: blue;
+  font-size: 150%;
+  
+}
+
+/* availability */
+.availability {
+  text-align: center;
+}
+/*  */
+.cherryharvest {
+  text-align: center;
+  border: 1px solid rgb(245, 175, 140);
+  margin: 0 500px;
+}
+
+/* 日程 */
+th,td {
+  border: 1px solid black;
+}
+
+
+/* 予約フォームのデザイン */
+#harvestform {
+  text-align: center;
+}
+
+/* COMING SOONのデザイン */
+.harvestfruitscoming {
+  border: 5px solid rgb(160, 160, 235);
+  text-align: center;
+  margin: 20px 500px;
+}
+
+
+
+
+
+/* コピーライトを調整 */
+footer {
+  text-align: center;
+  background-color: hsl(215, 93%, 67%);
+}

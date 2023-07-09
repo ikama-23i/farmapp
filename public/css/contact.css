@@ -1,0 +1,49 @@
+/* トップロゴのサイズ調整 */
+#toplogo{
+  width: 400px;
+  /* opacity: 0.7; */
+  margin: 10px;
+}
+
+/* nav調整 */
+.nav {
+  background-color: rgb(168, 236, 236);
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+}
+nav  a {
+  padding: 0 30px;
+  color: blue;
+  font-size: 150%;
+  
+}
+
+
+
+
+
+
+
+/* アクセスと周辺地図を横並び */
+.address {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+/* お問い合わせを真ん中に */
+.contact {
+  text-align: center;
+}
+
+/* Ikoma農園に下線部をいれる */
+#border {
+  padding: 10px;
+  border-bottom: 1px solid #333;
+}
+/* コピーライトを調整 */
+footer {
+  text-align: center;
+  background-color: #47e1f9;
+}
