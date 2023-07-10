@@ -16,5 +16,21 @@ class PostController extends Controller
     public function about() {
         return view('posts.show');
     }
+
+    // 果物狩り予約サイトについて
+    public function harvest() {
+        return view('posts.harvest');
+    }
+
+
+    // お問い合わせページについて
+    public function  contact() {
+        return view('posts.contact');
+    }
+
+    // お知らせページについて
+    public function  news() {
+        return view('posts.news');
+    }
 }
 
