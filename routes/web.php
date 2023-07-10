@@ -28,5 +28,6 @@ Route::get('/contact', [PostController::class, 'contact'])->name('posts.contact'
 Route::get('/harvest', [PostController::class, 'harvest'])->name('posts.harvest');
 
 // お問い合わせページへ
+Route::get('/contact', [PostController::class, 'contact'])->name('posts.contact');
 
 // お知らせページへ
