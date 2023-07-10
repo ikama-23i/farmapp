@@ -31,3 +31,4 @@ Route::get('/harvest', [PostController::class, 'harvest'])->name('posts.harvest'
 Route::get('/contact', [PostController::class, 'contact'])->name('posts.contact');
 
 // お知らせページへ
+Route::get('/news', [PostController::class, 'news'])->name('posts.news');
