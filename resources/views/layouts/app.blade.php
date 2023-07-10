@@ -17,7 +17,7 @@
       <!-- <a href="./fruits.html">農園の果物</a> -->
       <a href="{{ route('posts.show') }}">Ikoma農園について</a>
       <a href="./harvest.html">果物狩り【予約】</a>
-      <a href="./contact.html">お問い合わせ</a>
+      <a href="{{ route('posts.contact') }}">お問い合わせ</a>
       <a href="{{ route('posts.news') }}">お知らせ</a>
     </nav>
   </div>
