@@ -18,7 +18,7 @@ use App\Http\Controllers\PostController;
 
 
 // Ikoma農園ホームページ
-Route::get('/', [PostController::class,'index']);
+Route::get('/', [PostController::class,'index'])->name('posts.index');
 
 Route::get('/about', [PostController::class, 'about'])->name('posts.show');
 
