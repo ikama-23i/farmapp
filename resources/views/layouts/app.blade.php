@@ -12,7 +12,7 @@
 <body>
   <header>
     <div class="nav">
-    <a href="./index.html"><img src="./img/ikomalogo.jpg" alt="Ikoma農園のロゴマーク" id="toplogo"></a>
+    <a href="{{ route('posts.index') }}"><img src="./img/ikomalogo.jpg" alt="Ikoma農園のロゴマーク" id="toplogo"></a>
     <nav>
       <!-- <a href="./fruits.html">農園の果物</a> -->
       <a href="{{ route('posts.show') }}">Ikoma農園について</a>
