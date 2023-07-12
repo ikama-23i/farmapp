@@ -12,7 +12,7 @@
     <dl>
       <dt>2023.6.20</dt>
       <dd id="newscherry">サクランボ狩りの予約を開始しました。</dd>
-      <div id="newscherrycoment">大変お待たせ致しました。 <br>初夏の旬の味のサクランボが今年も立派に育ちました。<br><a href="./harvest.html">果物狩り【予約】</a> へご予約をお待ちしております。</div>
+      <div id="newscherrycoment">大変お待たせ致しました。 <br>初夏の旬の味のサクランボが今年も立派に育ちました。<br><a href="{{ route('posts.harvest') }}">果物狩り【予約】</a> へご予約をお待ちしております。</div>
     </dl>
     <dl>
       <dt>2023.3.25</dt>
