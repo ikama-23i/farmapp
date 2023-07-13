@@ -1,7 +1,9 @@
 @extends('layouts.app')
 
 @section('title', 'Ikoma農園-アクセス・お問い合わせはこちらから')
-
+@section('linktag')
+<link rel="stylesheet" href="./css/contact.css">
+@endsection
 @section('content')
 
 

@@ -1,7 +1,9 @@
 @extends('layouts.app')
 
 @section('title', 'Ikoma農園-果物狩り【予約】')
-
+@section('linktag')
+<link rel="stylesheet" href="./css/harvest.css">
+@endsection
 @section('content')
 
 
