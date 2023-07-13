@@ -60,9 +60,9 @@
       <textarea name="content" id="" cols="30" rows="5"></textarea>
       <br>
       <br>
-      <p>内容をお確かめの上、「入力内容を確認する」ボタンを押してください。</p>
+      <p>内容をお確かめの上、「送信ボタン」を押してください。</p>
       <input type="reset" value="リセットする">
-      <button type="submit">入力内容を確認する</button>
+      <button type="submit">送信する</button>
     </form>
   </div>
   
