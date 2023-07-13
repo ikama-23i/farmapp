@@ -32,3 +32,6 @@ Route::get('/contact', [PostController::class, 'contact'])->name('posts.contact'
 
 // お知らせページへ
 Route::get('/news', [PostController::class, 'news'])->name('posts.news');
+
+// お問い合わせページの作成機能
+Route::post('/contact', [PostController::class, 'inquiry'])->name('posts.inquiry');
