@@ -41,7 +41,7 @@
     <h1>
       お問い合わせ
     </h1>
-    <form action="{{ route('posts.inquiry') }}"  method="inquiry">
+    <form action="{{ route('posts.inquiry') }}"  method="post">
       @csrf
       <label for="name">氏名</label>
       <br>
