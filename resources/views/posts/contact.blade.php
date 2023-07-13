@@ -45,15 +45,15 @@
       @csrf
       <label for="name">氏名</label>
       <br>
-      <input type="text" placeholder="山田太郎">
+      <input type="text" placeholder="山田太郎" name="name">
       <br>
       <label for="tel">電話番号</label>
       <br>
-      <input type="text" placeholder="〇〇〇-〇〇〇-〇〇〇">
+      <input type="text" placeholder="〇〇〇-〇〇〇-〇〇〇" name="telphone">
       <br>
       <label for="mail">メールアドレス</label>
       <br>
-      <input type="text" placeholder="〇〇＠example.co.jp">
+      <input type="text" placeholder="〇〇＠example.co.jp" name="mail">
       <br>
       <label for="contact">お問い合わせ内容</label>
       <br>
