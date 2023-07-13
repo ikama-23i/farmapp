@@ -1,7 +1,9 @@
 @extends('layouts.app')
 
 @section('title', 'Ikoma農園')
-
+@section('linktag')
+<link rel="stylesheet" href="./css/index.css">
+@endsection
   @section('content')
     <article>
       <section class="firstsentens">

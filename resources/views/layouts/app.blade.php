@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="株式会社Ikoma農園サイトになります。果物たちの収穫体験してみませんか。">
   <title>@yield('title')</title>
-  <link rel="stylesheet" href="./css/index.css">
+  @yield('linktag')
 </head>
 
 <body>
