@@ -44,6 +44,7 @@ class PostController extends Controller
         $inquiry->telphone = $request->input('telphone');
         $inquiry->mail = $request->input('mail');
         $inquiry->content = $request->input('content');
+        $inquiry->save();
 
         return redirect()->route('posts.contact')->with('flash_message', '予約が完了致しました。控えのメールは予約当日まで大事に保管をお願いいたします。');
     }
