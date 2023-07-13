@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Inquiry;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -31,6 +32,17 @@ class PostController extends Controller
     // お知らせページについて
     public function  news() {
         return view('posts.news');
+    }
+
+    // お問い合わせページの作成機能
+    public function inquiry(Request $request) {
+        $inquiry = new Inquiry();
+        $inquiry->name = $request->input('name');
+        $inquiry->telphone = $request->input('telphone');
+        $inquiry->mail = $request->input('mail');
+        $inquiry->content = $request->input('content');
+
+        return redirect()->route('posts.contact')->with('flash_message', '予約が完了致しました。控えのメールは予約当日まで大事に保管をお願いいたします。');
     }
 }
 
