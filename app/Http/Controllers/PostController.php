@@ -39,6 +39,10 @@ class PostController extends Controller
 
     // お問い合わせページの作成機能
     public function inquiry(Request $request) {
+        $request->validate([
+            'name' => 'required',
+            
+        ]);
         $inquiry = new Inquiry();
         $inquiry->name = $request->input('name');
         $inquiry->telphone = $request->input('telphone');
