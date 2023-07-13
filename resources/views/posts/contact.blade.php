@@ -39,12 +39,13 @@
   <!-- お問い合わせフォーム -->
   <div class="contact">
     <h1>
-      <a href="./contact.html">お問い合わせ</a>
+      お問い合わせ
     </h1>
-    <form action="">
-      <label for="name">氏名（ふりがな）</label>
+    <form action="{{ route('posts.inquiry') }}"  method="inquiry">
+      @csrf
+      <label for="name">氏名</label>
       <br>
-      <input type="text" placeholder="ひらがなで入力してください。">
+      <input type="text" placeholder="山田太郎">
       <br>
       <label for="tel">電話番号</label>
       <br>
@@ -60,8 +61,8 @@
       <br>
       <br>
       <p>内容をお確かめの上、「入力内容を確認する」ボタンを押してください。</p>
-      <input type="submit" value="入力内容を確認する">
       <input type="reset" value="リセットする">
+      <button type="submit">入力内容を確認する</button>
     </form>
   </div>
   
