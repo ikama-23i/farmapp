@@ -6,8 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Inquiry;
 use Illuminate\Http\Request;
 
-// モデルの宣言
-use App\Models\Inquiry;
+
 
 
 class PostController extends Controller
