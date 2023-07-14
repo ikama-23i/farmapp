@@ -30,7 +30,7 @@
 
 
   @yield('footer')
-  <script src="./js/index.js"></script>
+  <script src="./js/news.js"></script>
 </body>
 
 </html>

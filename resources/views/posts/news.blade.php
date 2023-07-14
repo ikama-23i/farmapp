@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="./css/news.css">
 @endsection
 @section('content')
-<script src="./public/js/news.js"></script>
+
 
 <article>
   <section class="news">
@@ -29,6 +29,7 @@
   </section>
 </article>
 @endsection
+
 @section('footer')
 @include('layouts.footer')
 @endsection
