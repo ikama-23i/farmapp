@@ -8,7 +8,7 @@
 
 
 <body>
-    
+
 
 
   <!-- 住所＆地図 -->
@@ -30,10 +30,7 @@
     <div>
       <h2>周辺地図</h2>
       <p>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13044.562731515776!2d136.718627!3d35.178046!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600398f283bf0e47%3A0x52c29405c3b4f0!2z5rSl5bO256We56S-!5e0!3m2!1sja!2sjp!4v1686642477466!5m2!1sja!2sjp"
-          width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13044.562731515776!2d136.718627!3d35.178046!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600398f283bf0e47%3A0x52c29405c3b4f0!2z5rSl5bO256We56S-!5e0!3m2!1sja!2sjp!4v1686642477466!5m2!1sja!2sjp" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </p>
     </div>
   </div>
@@ -43,7 +40,18 @@
     <h1>
       お問い合わせ
     </h1>
-    <form action="{{ route('posts.inquiry') }}"  method="post">
+    
+    @if ($errors->any())
+    <div>
+      <ul>
+        @foreach ($errors->all() as $error)
+        <li>{{ $error }}</li>
+        @endforeach
+      </ul>
+    </div>
+    @endif
+    
+    <form action="{{ route('posts.inquiry') }}" method="post">
       @csrf
       <label for="name">氏名</label>
       <br>
@@ -67,9 +75,9 @@
       <button type="submit">送信する</button>
     </form>
   </div>
-  
+
 </body>
 @endsection
-  @section('footer')
+@section('footer')
 @include('layouts.footer')
 @endsection
