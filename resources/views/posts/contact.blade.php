@@ -40,7 +40,7 @@
     <h1>
       お問い合わせ
     </h1>
-    
+
     @if ($errors->any())
     <div>
       <ul>
@@ -55,19 +55,19 @@
       @csrf
       <label for="name">氏名</label>
       <br>
-      <input type="text" placeholder="山田太郎" name="name">
+      <input type="text" placeholder="山田太郎" name="name" value="{{ old('name') }}">
       <br>
       <label for="tel">電話番号</label>
       <br>
-      <input type="text" placeholder="〇〇〇-〇〇〇-〇〇〇" name="telphone">
+      <input type="text" placeholder="〇〇〇-〇〇〇-〇〇〇" name="telphone" value="{{ old('telphone') }}">
       <br>
       <label for="mail">メールアドレス</label>
       <br>
-      <input type="text" placeholder="〇〇＠example.co.jp" name="mail">
+      <input type="text" placeholder="〇〇＠example.co.jp" name="mail" value="{{ old('mail') }}">
       <br>
       <label for="contact">お問い合わせ内容</label>
       <br>
-      <textarea name="content" id="" cols="30" rows="5"></textarea>
+      <textarea name="content" id="" cols="30" rows="5">{{ old('content') }}</textarea>
       <br>
       <br>
       <p>内容をお確かめの上、「送信ボタン」を押してください。</p>
