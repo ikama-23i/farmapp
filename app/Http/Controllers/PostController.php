@@ -41,7 +41,9 @@ class PostController extends Controller
     public function inquiry(Request $request) {
         $request->validate([
             'name' => 'required',
-            
+            'telphone' => 'required',
+            'mail' => 'required|email',
+            'content' => 'required',
         ]);
         $inquiry = new Inquiry();
         $inquiry->name = $request->input('name');
