@@ -50,7 +50,11 @@
       </ul>
     </div>
     @endif
-    
+
+    @if (session('flash_message'))
+    <p>{{ session('flash_message') }}</p>
+    @endif
+
     <form action="{{ route('posts.inquiry') }}" method="post">
       @csrf
       <label for="name">氏名</label>
