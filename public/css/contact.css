@@ -37,6 +37,12 @@ nav  a {
   text-align: center;
 }
 
+/* エラーの装飾 */
+ul {
+  color: red;
+  list-style: none;
+}
+
 /* Ikoma農園に下線部をいれる */
 #border {
   padding: 10px;
