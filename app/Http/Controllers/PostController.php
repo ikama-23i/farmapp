@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Event;
 use App\Models\Inquiry;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 
@@ -23,7 +25,12 @@ class PostController extends Controller
 
     // 果物狩り予約サイトについて
     public function harvest() {
-        return view('posts.harvest');
+        $now = Carbon::now();
+        $events = Event::where("startDay", "<", $now)->where("endDay", ">", $now)->get();
+        
+        // return view('posts.harvest', ['events' => $events]);
+        return view('posts.harvest', compact('events'));
+
     }
 
 

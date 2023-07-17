@@ -43,6 +43,17 @@
       </table>
     </div>
 
+    @foreach($events as $event)
+    {{$event->startDay->addDay()}}
+    {{$event->startDay}}
+    @endforeach
+    @for($i=1;;$i++)
+      {{$event->startDay->addDay($i)}}
+      @if($event->startDay->addDay($i) >= $event-> endDay)
+        @break
+      @endif
+    @endfor
+
     <form action="" id="harvestform">
       <label for="day">日付：</label>
       <input type="date">
