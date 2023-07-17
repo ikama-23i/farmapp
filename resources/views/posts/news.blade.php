@@ -33,3 +33,6 @@
 @section('footer')
 @include('layouts.footer')
 @endsection
+@section('script')
+<script src="./js/news.js"></script>
+@endsection
