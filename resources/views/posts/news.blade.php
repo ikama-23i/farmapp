@@ -7,7 +7,7 @@
 @section('content')
 
 
-<article>
+<article id="article-news">
   <section class="news">
     <h2>お知らせ</h2>
     <br>
