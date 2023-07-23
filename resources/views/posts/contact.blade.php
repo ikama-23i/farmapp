@@ -52,7 +52,7 @@
     @endif
 
     @if (session('flash_message'))
-    <p>{{ session('flash_message') }}</p>
+    <p id="submitcomplete">{{ session('flash_message') }}</p>
     @endif
 
     <form action="{{ route('posts.inquiry') }}" method="post">
