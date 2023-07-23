@@ -41,7 +41,134 @@
         </thead>
 
       </table>
+
+      <table class="calender">
+                <tr class="clender_header">
+                    <th>日</th>
+                    <th>月</th>
+                    <th>火</th>
+                    <th>水</th>
+                    <th>木</th>
+                    <th>金</th>
+                    <th>土</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <div class="day">
+                            <p>1</p>
+                            <div><input type="radio"><label for="">午前</label></div>
+                            <div><input type="radio"><label for="">午後</label></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="day">
+                            <p>2</p>
+                            <div><input type="radio"><label for="">午前</label></div>
+                            <div><input type="radio"><label for="">午後</label></div>
+                        </div>
+                    </td>
+                    <td colspan="5" class="widthx5">
+                        <div class="day">
+                            <p></p>
+                            <div>お休み</div>
+                    </td>
+                    <!-- <td>
+                        <div class="day">
+                            <p>4</p>
+                            <div><input type="radio"><label for="">午前</label></div>
+                            <div><input type="radio"><label for="">午後</label></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="day">
+                            <p>5</p>
+                            <div><input type="radio"><label for="">午前</label></div>
+                            <div><input type="radio"><label for="">午後</label></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="day">
+                            <p>6</p>
+                            <div><input type="radio"><label for="">午前</label></div>
+                            <div><input type="radio"><label for="">午後</label></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="day">
+                            <p>7</p>
+                            <div><input type="radio"><label for="">午前</label></div>
+                            <div><input type="radio"><label for="">午後</label></div>
+                        </div>
+                    </td> -->
+                    <td>
+                        <div class="day">
+                            <p>8</p>
+                            <div><input type="radio"><label for="">午前</label></div>
+                            <div><input type="radio"><label for="">午後</label></div>
+                        </div>
+                    </td>
+                </tr>
+                <!-- <tr>
+                    <td>
+                        <div class="day">
+                            <p>2</p>
+                            <div><input type="radio"><label for="">午前</label></div>
+                            <div><input type="radio"><label for="">午後</label></div>
+                        </div>
+                    </td>
+                    <td class="">
+                        <div class="day">
+                            <p>3</p>                        </p>
+                            <div>お休み</div>
+                    </td>
+                    <td>
+                        <div class="day">
+                            <p>4</p>
+                            <div><input type="radio"><label for="">午前</label></div>
+                            <div><input type="radio"><label for="">午後</label></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="day">
+                            <p>5</p>
+                            <div><input type="radio"><label for="">午前</label></div>
+                            <div><input type="radio"><label for="">午後</label></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="day">
+                            <p>6</p>
+                            <div><input type="radio"><label for="">午前</label></div>
+                            <div><input type="radio"><label for="">午後</label></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="day">
+                            <p>7</p>
+                            <div><input type="radio"><label for="">午前</label></div>
+                            <div><input type="radio"><label for="">午後</label></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="day">
+                            <p>8</p>
+                            <div><input type="radio"><label for="">午前</label></div>
+                            <div><input type="radio"><label for="">午後</label></div>
+                        </div>
+                    </td>
+                </tr> -->
+            </table>
     </div>
+
+
 
     @foreach($events as $event)
     {{$event->startDay->addDay()}}
@@ -53,7 +180,15 @@
         @break
       @endif
     @endfor
-
+    @foreach($calendars as $key => $calender)
+      <h1>{{$key}}</h1>
+      @for($i=0;;$i++)
+      {{$calender->startDay->startOfMonth()->addDay($i)}}
+      @if($calender->startDay->startOfMonth()->addDay($i) >= $calender-> endDay)
+        @break
+      @endif
+    @endfor
+    @endforeach
     <form action="" id="harvestform">
       <label for="day">日付：</label>
       <input type="date">

@@ -27,9 +27,12 @@ class PostController extends Controller
     public function harvest() {
         $now = Carbon::now();
         $events = Event::where("startDay", "<", $now)->where("endDay", ">", $now)->get();
-        
+        $calendars = [];// 連想配列にしたい {"さくらんぼ狩り2023" => Eventオブジェクト, }
+        foreach( $events as $event){
+            $calendars[$event->name] = $event;
+        }
         // return view('posts.harvest', ['events' => $events]);
-        return view('posts.harvest', compact('events'));
+        return view('posts.harvest', compact('events', 'calendars'));
 
     }
 

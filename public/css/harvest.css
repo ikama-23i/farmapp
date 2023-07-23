@@ -57,3 +57,46 @@ footer {
   text-align: center;
   background-color: hsl(215, 93%, 67%);
 }
+
+table, td, th{
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+.day {
+  /* background-color: aqua; */
+  padding: 10px 20px;
+  width: 70px;
+  height: 100px;
+}
+
+.day p {
+  text-align: center;
+  margin-top: 0;
+}
+.day label {
+  font-size: small;
+}
+
+.day div {
+  display: flex;
+  align-items: center;
+}
+.day div input{
+  margin-top: 0;
+}
+
+.widthx5 .day{
+  width: 520px;
+}
+
+.header-row {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 30px
+}
+
+.header-row div{
+  width: 100%;
+  text-align: center;
+  border: 1px solid black;
+}
