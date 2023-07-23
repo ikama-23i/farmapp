@@ -41,6 +41,7 @@ nav  a {
 ul {
   color: red;
   list-style: none;
+  background-color: rgb(241, 213, 213);
 }
 
 /* Ikoma農園に下線部をいれる */
