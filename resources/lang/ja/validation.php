@@ -154,7 +154,10 @@ return [
     */
 
     'attributes' => [
-        'name' => '名前'
+        'name' => '名前',
+        'telphone' => '電話番号',
+        'mail' => 'メールアドレス',
+        'content' => 'お問い合わせ内容',
     ],
 
 ];
