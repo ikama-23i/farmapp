@@ -100,3 +100,11 @@ table, td, th{
   text-align: center;
   border: 1px solid black;
 }
+
+/* スケージュールに午前午後の装飾 */
+.morning {
+  background-color: rgb(213, 251, 251);
+}
+.afternoon {
+  background-color: rgb(248, 225, 208);
+}

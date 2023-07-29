@@ -62,8 +62,8 @@
                     <td>
                         <div class="day">
                             <p>1</p>
-                            <div><input type="radio"><label for="">午前</label></div>
-                            <div><input type="radio"><label for="">午後</label></div>
+                            <div class="morning"><input type="radio"><label for="">午前</label></div>
+                            <div class="afternoon"><input type="radio"><label for="">午後</label></div>
                         </div>
                     </td>
                 </tr>
@@ -71,8 +71,8 @@
                     <td>
                         <div class="day">
                             <p>2</p>
-                            <div><input type="radio"><label for="">午前</label></div>
-                            <div><input type="radio"><label for="">午後</label></div>
+                            <div class="morning"><input type="radio"><label for="">午前</label></div>
+                            <div class="afternoon"><input type="radio"><label for="">午後</label></div>
                         </div>
                     </td>
                     <td colspan="5" class="widthx5">
@@ -111,8 +111,8 @@
                     <td>
                         <div class="day">
                             <p>8</p>
-                            <div><input type="radio"><label for="">午前</label></div>
-                            <div><input type="radio"><label for="">午後</label></div>
+                            <div class="morning"><input type="radio"><label for="">午前</label></div>
+                            <div class="afternoon"><input type="radio"><label for="">午後</label></div>
                         </div>
                     </td>
                 </tr>
