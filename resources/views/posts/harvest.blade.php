@@ -43,44 +43,44 @@
       </table>
 
       <table class="calender">
-                <tr class="clender_header">
-                    <th>日</th>
-                    <th>月</th>
-                    <th>火</th>
-                    <th>水</th>
-                    <th>木</th>
-                    <th>金</th>
-                    <th>土</th>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>
-                        <div class="day">
-                            <p>1</p>
-                            <div class="morning"><input type="radio" name="time"><label for="">午前</label></div>
-                            <div class="afternoon"><input type="radio" name="time"><label for="">午後</label></div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="day">
-                            <p>2</p>
-                            <div class="morning"><input type="radio" name="time"><label for="">午前</label></div>
-                            <div class="afternoon"><input type="radio" name="time"><label for="">午後</label></div>
-                        </div>
-                    </td>
-                    <td colspan="5" class="widthx5">
-                        <div class="day">
-                            <p></p>
-                            <div>お休み</div>
-                    </td>
-                    <!-- <td>
+        <tr class="clender_header">
+          <th>日</th>
+          <th>月</th>
+          <th>火</th>
+          <th>水</th>
+          <th>木</th>
+          <th>金</th>
+          <th>土</th>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>
+            <div class="day">
+              <p>1</p>
+              <div class="morning"><input type="radio" name="time"><label for="">午前</label></div>
+              <div class="afternoon"><input type="radio" name="time"><label for="">午後</label></div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="day">
+              <p>2</p>
+              <div class="morning"><input type="radio" name="time"><label for="">午前</label></div>
+              <div class="afternoon"><input type="radio" name="time"><label for="">午後</label></div>
+            </div>
+          </td>
+          <td colspan="5" class="widthx5">
+            <div class="day">
+              <p></p>
+              <div>お休み</div>
+          </td>
+          <!-- <td>
                         <div class="day">
                             <p>4</p>
                             <div><input type="radio"><label for="">午前</label></div>
@@ -108,15 +108,15 @@
                             <div><input type="radio"><label for="">午後</label></div>
                         </div>
                     </td> -->
-                    <td>
-                        <div class="day">
-                            <p>8</p>
-                            <div class="morning"><input type="radio" name="time"><label for="">午前</label></div>
-                            <div class="afternoon"><input type="radio" name="time"><label for="">午後</label></div>
-                        </div>
-                    </td>
-                </tr>
-                <!-- <tr>
+          <td>
+            <div class="day">
+              <p>8</p>
+              <div class="morning"><input type="radio" name="time"><label for="">午前</label></div>
+              <div class="afternoon"><input type="radio" name="time"><label for="">午後</label></div>
+            </div>
+          </td>
+        </tr>
+        <!-- <tr>
                     <td>
                         <div class="day">
                             <p>2</p>
@@ -165,7 +165,7 @@
                         </div>
                     </td>
                 </tr> -->
-            </table>
+      </table>
     </div>
 
 
@@ -175,19 +175,52 @@
     {{$event->startDay}}
     @endforeach
     @for($i=1;;$i++)
-      {{$event->startDay->addDay($i)}}
-      @if($event->startDay->addDay($i) >= $event-> endDay)
-        @break
-      @endif
+    {{$event->startDay->addDay($i)}}
+    @if($event->startDay->addDay($i) >= $event-> endDay)
+    @break
+    @endif
     @endfor
     @foreach($calendars as $key => $calender)
-      <h1>{{$key}}</h1>
+    <h1>{{$key}}</h1>
+    <table class="calender">
+      <tr class="clender_header">
+        <th>日</th>
+        <th>月</th>
+        <th>火</th>
+        <th>水</th>
+        <th>木</th>
+        <th>金</th>
+        <th>土</th>
+      </tr>
       @for($i=0;;$i++)
-      {{$calender->startDay->startOfMonth()->addDay($i)}}
-      @if($calender->startDay->startOfMonth()->addDay($i) >= $calender-> endDay)
-        @break
-      @endif
-    @endfor
+        @if($calender->startDay->startOfMonth()->addDay($i)->dayOfWeek == 0 || $i == 0)
+          <tr>
+        @endif
+        @if($i == 0)
+          @for($j = $calender->startDay->startOfMonth()->addDay($i)->dayOfWeek; $j > 0; $j--)
+            <td></td>
+          @endfor
+        @endif
+            <td>
+              <div class="day">
+                @if(!in_array($calender->startDay->startOfMonth()->addDay($i)->dayOfWeek, str_split((string)($calender->holiday))))
+                  <p>{{$calender->startDay->startOfMonth()->addDay($i)->day}}</p>
+                  <div class="morning"><input type="radio" name="time"><label for="">午前</label></div>
+                  <div class="afternoon"><input type="radio" name="time"><label for="">午後</label></div>
+                @else
+                  <p>{{$calender->startDay->startOfMonth()->addDay($i)->day}}</p>
+                  <p>お休み</p>
+                @endif
+              </div>
+            </td>
+        @if($calender->startDay->startOfMonth()->addDay($i) >= $calender-> endDay)
+          @break
+        @endif
+        @if($calender->startDay->startOfMonth()->addDay($i)->dayOfWeek == 6)
+          </tr>
+        @endif
+      @endfor
+    </table>
     @endforeach
     <form action="" id="harvestform">
       <label for="day">日付：</label>
