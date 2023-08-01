@@ -98,6 +98,12 @@
 
     <form action="{{ route('posts.book') }}" method="book" id="harvestform">
       @csrf  
+      <label for="day">day</label>
+      <input type="date" name="day" value="{{ old('day') }}">
+      <br>
+      <label for="ampm">ampm</label>
+      <input type="text" name="ampm" value="{{ old('ampm') }}">
+
       <br>
       <label for="name">代表氏名：</label>
       <input type="name" placeholder="山田太郎" name="name" value="{{ old('name') }}">様
@@ -113,8 +119,13 @@
       <input type="tel" placeholder="〇〇〇-〇〇〇-〇〇〇" name="tel" value="{{ old('tel') }}">
       <br>
       <br>
+
+      <label for="event_id">event_id</label>
+      <input type="text" name="event_id" value="{{ old('event_id') }}">
+
+      <br>
       <input type="reset" value="リセットする">
-      <button type="submit">予約する</button>
+      <button type="submit">送信する</button>
     </form>
   </section>
 

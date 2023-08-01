@@ -74,10 +74,13 @@ public function book(Request $request) {
         'tel' => 'required',
     ]);
     $book = new Book();
+    $book->day = $request->input('day');
+    $book->ampm = $request->input('ampm');
     $book->name = $request->input('name');
     $book->furigane = $request->input('furigana');
     $book->people = $request->input('people');
     $book->child = $request->input('tel');
+    $book->event_id = $request->input('event_id');
     $book->save();
 
     return redirect()->route('posts.harvest')->with('flash_message','予約が完了いたしました。');
