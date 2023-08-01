@@ -63,12 +63,11 @@ class PostController extends Controller
 
         return redirect()->route('posts.contact')->with('flash_message', 'お問い合わせ内容を送信完了いたしました。');
     }
-}
+
 
 // 予約フォームの作成機能（送信） コメントアウト
-/*
 public function book(Request $request) {
-    $reserve->validate([
+    $request->validate([
         'name' => 'required',
         'furigana' => 'required',
         'people' => 'required|max:10',
@@ -77,11 +76,11 @@ public function book(Request $request) {
     $book = new Book();
     $book->name = $request->input('name');
     $book->furigane = $request->input('furigana');
-    $book->adult = $request->input('adult');
+    $book->people = $request->input('people');
     $book->child = $request->input('tel');
     $book->save();
 
     return redirect()->route('posts.harvest')->with('flash_message','予約が完了いたしました。');
 
 }
-*/
+}

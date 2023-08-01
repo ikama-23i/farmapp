@@ -81,9 +81,23 @@
       @endfor
     </table>
     @endforeach
-    <form action="" id="harvestform">
-      
-      
+
+    @if ($errors->any())
+    <div>
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+    @endif
+
+    @if (session('flash_message'))
+        <p>{{ session('flash_message') }}</p>
+    @endif
+
+    <form action="{{ route('posts.book') }}" method="book" id="harvestform">
+      @csrf  
       <br>
       <label for="name">代表氏名：</label>
       <input type="name" placeholder="山田太郎" name="name" value="{{ old('name') }}">様
@@ -91,15 +105,15 @@
       <label for="furigana">ふりがな：</label>
       <input type="furigana" placeholder="やまだたろう" name="furigana" value="{{ old('furigana') }}">さま
       <br>
-      <label for="adult">人数：</label>
-      <input type="number" style="width: 20px;" name="people" value="{{ old('people') }}">名
-      <!-- <label for="child">子供：</label>
-      <input type="number" style="width: 20px;" name="child" value="{{ old('child') }}">名 -->
+      <label for="people">人数：</label>
+      <input type="number" style="width: 40px;" name="people" value="{{ old('people') }}" >名
+      
       <br>
       <label for="tel">電話番号：</label>
-      <input type="tel" placeholder="〇〇〇-〇〇〇-〇〇〇" name="tel" value="{{ old('child') }}">
+      <input type="tel" placeholder="〇〇〇-〇〇〇-〇〇〇" name="tel" value="{{ old('tel') }}">
       <br>
       <br>
+      <input type="reset" value="リセットする">
       <button type="submit">予約する</button>
     </form>
   </section>
