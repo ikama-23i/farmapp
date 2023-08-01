@@ -35,3 +35,6 @@ Route::get('/news', [PostController::class, 'news'])->name('posts.news');
 
 // お問い合わせページの作成機能
 Route::post('/contact', [PostController::class, 'inquiry'])->name('posts.inquiry');
+
+// 予約ページの作成機能
+Route::post('/harvest', [PostController::class, 'book'])->name('posts.book');

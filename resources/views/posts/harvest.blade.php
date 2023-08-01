@@ -86,18 +86,18 @@
       
       <br>
       <label for="name">代表氏名：</label>
-      <input type="name" placeholder="山田太郎">様
+      <input type="name" placeholder="山田太郎" name="name" value="{{ old('name') }}">様
       <br>
       <label for="furigana">ふりがな：</label>
-      <input type="furigana" placeholder="やまだたろう">さま
+      <input type="furigana" placeholder="やまだたろう" name="furigana" value="{{ old('furigana') }}">さま
       <br>
-      <label for="adult">大人：</label>
-      <input type="number" style="width: 20px;">名
-      <label for="child">子供：</label>
-      <input type="number" style="width: 20px;">名
+      <label for="adult">人数：</label>
+      <input type="number" style="width: 20px;" name="people" value="{{ old('people') }}">名
+      <!-- <label for="child">子供：</label>
+      <input type="number" style="width: 20px;" name="child" value="{{ old('child') }}">名 -->
       <br>
       <label for="tel">電話番号：</label>
-      <input type="tel" placeholder="〇〇〇-〇〇〇-〇〇〇">
+      <input type="tel" placeholder="〇〇〇-〇〇〇-〇〇〇" name="tel" value="{{ old('child') }}">
       <br>
       <br>
       <button type="submit">予約する</button>
