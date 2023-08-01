@@ -5,11 +5,10 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\Event;
 use App\Models\Inquiry;
+use App\Models\Book;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
-
-
-
+use Symfony\Contracts\Service\Attribute\Required;
 
 class PostController extends Controller
 {
@@ -66,3 +65,23 @@ class PostController extends Controller
     }
 }
 
+// 予約フォームの作成機能（送信） コメントアウト
+/*
+public function book(Request $request) {
+    $reserve->validate([
+        'name' => 'required',
+        'furigana' => 'required',
+        'people' => 'required|max:10',
+        'tel' => 'required',
+    ]);
+    $book = new Book();
+    $book->name = $request->input('name');
+    $book->furigane = $request->input('furigana');
+    $book->adult = $request->input('adult');
+    $book->child = $request->input('tel');
+    $book->save();
+
+    return redirect()->route('posts.harvest')->with('flash_message','予約が完了いたしました。');
+
+}
+*/
