@@ -64,8 +64,9 @@
               <div class="day">
                 @if(!in_array($calender->startDay->startOfMonth()->addDay($i)->dayOfWeek, str_split((string)($calender->holiday))))
                   <p>{{$calender->startDay->startOfMonth()->addDay($i)->day}}</p>
-                  <div class="morning"><input type="radio" name="time"><label for="">午前</label></div>
-                  <div class="afternoon"><input type="radio" name="time"><label for="">午後</label></div>
+                  <input type="hidden" value="{{$calender->startDay->startOfMonth()->addDay($i)->format('Y/m/d')}}">
+                  <div class="morning"><input type="radio" name="time" value="1" form="harvestform"><label for="">午前</label></div>
+                  <div class="afternoon"><input type="radio" name="time" value="2" form="harvestform"><label for="">午後</label></div>
                 @else
                   <p>{{$calender->startDay->startOfMonth()->addDay($i)->day}}</p>
                   <p>お休み</p>
@@ -98,11 +99,11 @@
 
     <form action="{{ route('posts.book') }}" method="post" id="harvestform">
       @csrf  
-      <label for="day">day</label>
-      <input type="date" name="day" value="{{ old('day') }}">
+      
+      <input type="hidden" name="day">
       <br>
-      <label for="ampm">ampm</label>
-      <input type="text" name="ampm" value="{{ old('ampm') }}">
+      <!-- <label for="ampm">ampm</label>
+      <input type="text" name="ampm" value="{{ old('ampm') }}"> -->
 
       <br>
       <label for="name">代表氏名：</label>
@@ -152,4 +153,13 @@
 @endsection
 @section('footer')
 @include('layouts.footer')
+
+<script>
+  document.querySelectorAll(".day div input").forEach((item) => {
+    item.addEventListener("click",(e) => {
+      const day = e.target.parentNode.parentNode.querySelector("input[type=hidden]").value;
+      document.querySelector("input[name=day]").value = day;
+    });
+  });
+</script>
 @endsection

@@ -76,7 +76,7 @@ public function book(Request $request) {
     
     $book = new Book();
     $book->day = $request->input('day');
-    $book->ampm = $request->input('ampm');
+    $book->ampm = $request->input('time');
     $book->name = $request->input('name');
     $book->furigana = $request->input('furigana');
     $book->people = $request->input('people');
