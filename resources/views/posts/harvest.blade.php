@@ -134,6 +134,7 @@
   <div class="harvestfruitscoming">
     <p>柿狩り</p>
     <p>～COMING SOON～</p>
+    <p>現時点では予約を承っておりません。</p>
     <p>2023年9月～11月の予定です。しばらくお待ちください。</p>
   </div>
   <br>
@@ -141,6 +142,7 @@
   <div class="harvestfruitscoming">
     <p>ミカン狩り</p>
     <p>～COMING SOON～</p>
+    <p>現時点では予約を承っておりません。</p>
     <p>2023年10月～12月の予定です。しばらくお待ちください。</p>
   </div>
   <br>
@@ -148,6 +150,7 @@
   <div class="harvestfruitscoming">
     <p>レモン狩り</p>
     <p>～COMING SOON～</p>
+    <p>現時点では予約を承っておりません。</p>
     <p>2023年10月～12月の予定です。しばらくお待ちください。</p>
   </div>
   <br>
