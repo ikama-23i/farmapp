@@ -96,7 +96,7 @@
         <p>{{ session('flash_message') }}</p>
     @endif
 
-    <form action="{{ route('posts.book') }}" method="book" id="harvestform">
+    <form action="{{ route('posts.book') }}" method="post" id="harvestform">
       @csrf  
       <label for="day">day</label>
       <input type="date" name="day" value="{{ old('day') }}">

@@ -73,13 +73,14 @@ public function book(Request $request) {
         'people' => 'required|max:10',
         'tel' => 'required',
     ]);
+    
     $book = new Book();
     $book->day = $request->input('day');
     $book->ampm = $request->input('ampm');
     $book->name = $request->input('name');
-    $book->furigane = $request->input('furigana');
+    $book->furigana = $request->input('furigana');
     $book->people = $request->input('people');
-    $book->child = $request->input('tel');
+    $book->tel = $request->input('tel');
     $book->event_id = $request->input('event_id');
     $book->save();
 
