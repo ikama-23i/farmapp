@@ -68,6 +68,7 @@ class PostController extends Controller
 // 予約フォームの作成機能（送信） コメントアウト
 public function book(Request $request) {
     $request->validate([
+        'time' => 'required',
         'name' => 'required',
         'furigana' => 'required',
         'people' => 'required|max:10',
@@ -84,7 +85,7 @@ public function book(Request $request) {
     $book->event_id = $request->input('event_id');
     $book->save();
 
-    return redirect()->route('posts.harvest')->with('flash_message','予約が完了いたしました。');
+    return redirect()->route('posts.harvest')->with('flash_message','ご予約が完了いたしました！　ありがとうございます。スタッフ一同、お会いできることを楽しみにしております。');
 
 }
 }

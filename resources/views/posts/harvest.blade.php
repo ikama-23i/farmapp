@@ -20,25 +20,25 @@
       <!-- <li></li> -->
     </ul>
   </section>
+
+    
+    @if (session('flash_message'))
+        <p class="booking">{{ session('flash_message') }}</p>
+    @endif
+
+    @if ($errors->any())
+    <div>
+        <ul class="errors">
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+    @endif
+
   <!-- サクランボ狩り -->
   <section class="cherryharvest">
-    <p>サクランボ狩り</p>
-    <div class="availability">
-      <p>空き状況</p>
-    </div>
-
-
-
-    @foreach($events as $event)
-    {{$event->startDay->addDay()}}
-    {{$event->startDay}}
-    @endforeach
-    @for($i=1;;$i++)
-    {{$event->startDay->addDay($i)}}
-    @if($event->startDay->addDay($i) >= $event-> endDay)
-    @break
-    @endif
-    @endfor
+            
     @foreach($calendars as $key => $calender)
     <h1>{{$key}}</h1>
     <table class="calender">
@@ -85,16 +85,12 @@
 
     @if ($errors->any())
     <div>
-        <ul>
+        <ul class="errors">
             @foreach ($errors->all() as $error)
                 <li>{{ $error }}</li>
             @endforeach
         </ul>
     </div>
-    @endif
-
-    @if (session('flash_message'))
-        <p>{{ session('flash_message') }}</p>
     @endif
 
     <form action="{{ route('posts.book') }}" method="post" id="harvestform">
@@ -112,7 +108,7 @@
       <label for="furigana">ふりがな：</label>
       <input type="furigana" placeholder="やまだたろう" name="furigana" value="{{ old('furigana') }}">さま
       <br>
-      <label for="people">人数：</label>
+      <label for="people">人数：&emsp;&emsp;</label>
       <input type="number" style="width: 40px;" name="people" value="{{ old('people') }}" >名
       
       <br>
@@ -125,29 +121,36 @@
       <input type="text" name="event_id" value="{{ old('event_id') }}">
 
       <br>
-      <input type="reset" value="リセットする">
-      <button type="submit">送信する</button>
+      <input type="reset" value="リセット" class="reset">
+      &emsp;
+      <button type="submit" class="submit">送信する</button>
     </form>
   </section>
 
+  <br>
+  <hr>
+  <br>
   <!-- 柿狩り -->
   <div class="harvestfruitscoming">
     <p>柿狩り</p>
-    <p>COMING SOON</p>
+    <p>～COMING SOON～</p>
     <p>2023年9月～11月の予定です。しばらくお待ちください。</p>
   </div>
+  <br>
   <!-- ミカン狩り -->
   <div class="harvestfruitscoming">
     <p>ミカン狩り</p>
-    <p>COMING SOON</p>
+    <p>～COMING SOON～</p>
     <p>2023年10月～12月の予定です。しばらくお待ちください。</p>
   </div>
+  <br>
   <!-- レモン狩り -->
   <div class="harvestfruitscoming">
     <p>レモン狩り</p>
-    <p>COMING SOON</p>
+    <p>～COMING SOON～</p>
     <p>2023年10月～12月の予定です。しばらくお待ちください。</p>
   </div>
+  <br>
 </article>
 
 @endsection

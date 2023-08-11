@@ -19,15 +19,14 @@ nav  a {
   
 }
 
-/* availability */
-.availability {
-  text-align: center;
-}
-/*  */
+/* cherry予約フォーム部分 */
 .cherryharvest {
   text-align: center;
-  border: 1px solid rgb(245, 175, 140);
-  margin: 0 500px;
+  /* border: 1px solid rgb(245, 175, 140); */
+}
+.calender {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* 日程 */
@@ -40,12 +39,19 @@ th,td {
 #harvestform {
   text-align: center;
 }
+.reset{
+  color: rgb(247, 9, 9);
+}
+
 
 /* COMING SOONのデザイン */
 .harvestfruitscoming {
-  border: 5px solid rgb(160, 160, 235);
+  margin-left: auto;
+  margin-right: auto;
+  border: 5px solid rgb(209, 209, 250);
   text-align: center;
-  margin: 20px 500px;
+  width: 500px;
+  /* margin: 20px 500px; */
 }
 
 
@@ -113,4 +119,17 @@ table, td, th{
 /* ご予約について確認事項　装飾 */
 #checklist {
   
+}
+
+.booking {
+  text-align: center;
+  color: rgb(0, 26, 255);
+  background-color: rgb(185, 244, 245);
+}
+
+.errors {
+  text-align: center;
+  color: red;
+  list-style: none;
+  background-color: rgb(241, 213, 213);
 }
