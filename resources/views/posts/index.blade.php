@@ -86,8 +86,10 @@
             <hr>
 
             <div>
+              <div class="comingsoon">
               <p>【⇩~~COMING SOON~~⇩】<br>現在、生産量が安定するまで丹精込めて育てております。<br> 収穫などのご案内の際には <a href="{{ route('posts.news') }}"> お知らせ</a>にて掲載いたします。<br>しばらくお待ちくださいませ。
               </p>
+              </div>
             </div>
             <!-- タケノコ -->
             <div class="icondescription">
@@ -119,7 +121,8 @@
 
 
     </article>
-  
+  <br>
+  <br>
 @endsection
 @section('footer')
 @include('layouts.topfooter')

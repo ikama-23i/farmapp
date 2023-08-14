@@ -20,8 +20,10 @@ nav  a {
 }
 
 
-
-
+/* お問い合わせ　送信ボタンリセット装飾 */
+.reset {
+  color: rgb(247, 9, 9);
+}
 
 
 
@@ -66,5 +68,9 @@ footer {
     nav a {
       display: block;
       font-size: medium;
+    }
+    .address {
+      display: block;
+      text-align: center;
     }
 }

@@ -75,7 +75,7 @@
       <br>
       <br>
       <p>内容をお確かめの上、「送信ボタン」を押してください。</p>
-      <input type="reset" value="リセットする">
+      <input type="reset" value="リセットする" class="reset">
       <button type="submit">送信する</button>
     </form>
   </div>

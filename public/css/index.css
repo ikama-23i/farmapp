@@ -41,7 +41,7 @@ nav  a {
 
 /* 果物狩りのそれぞれを囲む&均等幅にする */
 .fruits-harvestchild {
-  border: double 4px #f7d58c;
+  border: double 4px #fce3ac;
   border-radius: 10px;
   padding: 10px;
   text-align: center;
@@ -58,7 +58,7 @@ nav  a {
 .icondescription {
   display: flex;
   align-items: center;
-  border-bottom: inset rgb(113, 242, 225);
+  border-bottom: inset rgb(158, 247, 235);
 }
 
 
@@ -92,7 +92,7 @@ nav  a {
 /* footer部分 */
 
 footer {
-  background-color: rgb(131, 157, 253);
+  background-color: rgb(197, 209, 254);
   color: rgb(2, 96, 26);
   text-align: center
 }
@@ -114,14 +114,24 @@ footer {
   color: rgb(17, 0, 249);
 }
 
-
+/* 果物紹介のカミングスーン部分の装飾 */
+.comingsoon {
+  margin-left: auto;
+  margin-right: auto;
+  border: 5px solid rgb(211, 253, 204);
+  text-align: center;
+  width: 500px;
+  background-color: rgb(247, 249, 247);
+}
   /* レスポンシブデザイン　果物カレンダーと紹介を縦並びにする */
 @media screen and (max-width: 800px) {
   .parentfruits {
     display: block;
+    text-align: center;
     }
     nav a {
       display: block;
       font-size: medium;
     }
+    
 }
