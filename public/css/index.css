@@ -61,6 +61,13 @@ nav  a {
   border-bottom: inset rgb(113, 242, 225);
 }
 
+/* レスポンシブデザイン　果物カレンダーと紹介を縦並びにする */
+@media screen and (max-width: 800px) {
+  .parentfruits {
+    display: block;
+  }
+}
+
 /*  */
 .iconpic {
   margin:0 20px 0 0;
