@@ -7,7 +7,7 @@
 
 /* nav調整 */
 .nav {
-  background-color: rgb(168, 236, 236);
+  background-color:  rgb(188, 249, 249);
   display: flex;
   justify-content:space-around;
   align-items: center;
@@ -39,4 +39,12 @@ nav  a {
 footer {
   text-align: center;
   background-color: #d7cef9;
+}
+
+  /* レスポンシブデザイン　果物カレンダーと紹介を縦並びにする */
+  @media screen and (max-width: 800px) {
+    nav a {
+      display: block;
+      font-size: medium;
+    }
 }

@@ -8,14 +8,14 @@
 
 /* nav調整 */
 .nav {
-  background-color: rgb(168, 236, 236);
+  background-color: rgb(188, 249, 249);
   display: flex;
   justify-content:space-around;
   align-items: center;
 }
 nav  a {
   padding: 0 30px;
-  color: blue;
+  color: rgb(39, 39, 247);
   font-size: 150%;
   
 }
@@ -61,12 +61,6 @@ nav  a {
   border-bottom: inset rgb(113, 242, 225);
 }
 
-/* レスポンシブデザイン　果物カレンダーと紹介を縦並びにする */
-@media screen and (max-width: 800px) {
-  .parentfruits {
-    display: block;
-  }
-}
 
 /*  */
 .iconpic {
@@ -118,4 +112,16 @@ footer {
 /* コピーライト部分の調整 */
 #endc {
   color: rgb(17, 0, 249);
+}
+
+
+  /* レスポンシブデザイン　果物カレンダーと紹介を縦並びにする */
+@media screen and (max-width: 800px) {
+  .parentfruits {
+    display: block;
+    }
+    nav a {
+      display: block;
+      font-size: medium;
+    }
 }

@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="株式会社Ikoma農園サイトになります。果物たちの収穫体験してみませんか。">
+  <meta name="description" content="株式会社Ikoma農園サイトになります。果物の収穫体験をしてみませんか。">
   <title>@yield('title')</title>
   @yield('linktag')
 </head>

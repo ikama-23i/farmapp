@@ -41,6 +41,7 @@
             
     @foreach($calendars as $key => $calender)
     <h1>{{$key}}</h1>
+    <h1>8月（土日のみ）</h1>
     <table class="calender">
       <tr class="clender_header">
         <th>日</th>
