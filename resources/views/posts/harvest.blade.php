@@ -135,9 +135,10 @@
       <label for="tel">電話番号：</label>
       <input type="tel" placeholder="〇〇〇-〇〇〇-〇〇〇" name="tel" value="{{ old('tel') }}">
       <br>
-
-      <label for="event_id">郵便番号（〒）</label>
-      <input type="text" name="event_id" placeholder="〇〇〇-〇〇〇〇" value="{{ old('event_id') }}">
+      <br>
+      
+      <label for="event_id">《ご利用回数》<br>初めての方は'1'を 2回目以降の方は'2'を入力してください。</label>
+      <br><input type="text" name="event_id" placeholder="'1' or '2'" value="{{ old('event_id') }}">
       
       <br>
       <br>
