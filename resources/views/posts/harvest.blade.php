@@ -135,13 +135,14 @@
       <label for="tel">電話番号：</label>
       <input type="tel" placeholder="〇〇〇-〇〇〇-〇〇〇" name="tel" value="{{ old('tel') }}">
       <br>
+
+      <label for="event_id">郵便番号（〒）</label>
+      <input type="text" name="event_id" placeholder="〇〇〇-〇〇〇〇" value="{{ old('event_id') }}">
+      
       <br>
-
-      <label for="event_id">event_id</label>
-      <input type="text" name="event_id" value="{{ old('event_id') }}">
-
       <br>
       <input type="reset" value="リセット" class="reset">
+      
       &emsp;
       <button type="submit" class="submit">送信する</button>
     </form>

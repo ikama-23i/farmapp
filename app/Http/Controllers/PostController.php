@@ -73,6 +73,7 @@ public function book(Request $request) {
         'furigana' => 'required',
         'people' => 'required|max:10',
         'tel' => 'required',
+        'event_id' => 'required',
     ]);
     
     $book = new Book();
