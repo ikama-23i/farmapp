@@ -38,50 +38,69 @@
 
   <!-- サクランボ狩り -->
   <section class="cherryharvest">
-            
+    @php
+      $day = 0;
+      $month=0;
+    @endphp
     @foreach($calendars as $key => $calender)
-    <h1>{{$key}}</h1>
-    <h1>8月（土日のみ）</h1>
-    <table class="calender">
-      <tr class="clender_header">
-        <th>日</th>
-        <th>月</th>
-        <th>火</th>
-        <th>水</th>
-        <th>木</th>
-        <th>金</th>
-        <th>土</th>
-      </tr>
-      @for($i=0;;$i++)
-        @if($calender->startDay->startOfMonth()->addDay($i)->dayOfWeek == 0 || $i == 0)
-          <tr>
-        @endif
-        @if($i == 0)
-          @for($j = $calender->startDay->startOfMonth()->addDay($i)->dayOfWeek; $j > 0; $j--)
-            <td></td>
+      @if($month == 0)
+        @php
+          $month=$calender->startDay->startOfMonth()->month
+        @endphp
+      @endif
+      <h1>{{$key}}</h1>
+      @for($event = 0;;$event++)
+        <h1>{{ $month }}月（土日のみ）</h1>
+        <table class="calender">
+          <tr class="clender_header">
+            <th>日</th>
+            <th>月</th>
+            <th>火</th>
+            <th>水</th>
+            <th>木</th>
+            <th>金</th>
+            <th>土</th>
+          </tr>
+          @for($i=$day;;$i++)
+            @if($calender->startDay->startOfMonth()->addDay($i)->month != $month)
+              @php
+                $month += 1;
+                $day = $i;
+              @endphp
+              @break
+            @endif
+            @if($calender->startDay->startOfMonth()->addDay($i)->dayOfWeek == 0 || $i == 0)
+              <tr>
+            @endif
+            @if($calender->startDay->startOfMonth()->addDay($i)->day == 1)
+              @for($j = $calender->startDay->startOfMonth()->addDay($i)->dayOfWeek; $j > 0; $j--)
+                <td></td>
+              @endfor
+            @endif
+
+                <td>
+                  <div class="day">
+                    @if(!in_array($calender->startDay->startOfMonth()->addDay($i)->dayOfWeek, str_split((string)($calender->holiday))))
+                      <p>{{$calender->startDay->startOfMonth()->addDay($i)->day}}</p>
+                      <input type="hidden" value="{{$calender->startDay->startOfMonth()->addDay($i)->format('Y/m/d')}}">
+                      <div class="morning"><input type="radio" name="time" value="1" form="harvestform"><label for="">午前</label></div>
+                      <div class="afternoon"><input type="radio" name="time" value="2" form="harvestform"><label for="">午後</label></div>
+                    @else
+                      <p>{{$calender->startDay->startOfMonth()->addDay($i)->day}}</p>
+                      <p>お休み</p>
+                    @endif
+                  </div>
+                </td>
+
+            @if($calender->startDay->startOfMonth()->addDay($i)->dayOfWeek == 6)
+              </tr>
+            @endif
           @endfor
-        @endif
-            <td>
-              <div class="day">
-                @if(!in_array($calender->startDay->startOfMonth()->addDay($i)->dayOfWeek, str_split((string)($calender->holiday))))
-                  <p>{{$calender->startDay->startOfMonth()->addDay($i)->day}}</p>
-                  <input type="hidden" value="{{$calender->startDay->startOfMonth()->addDay($i)->format('Y/m/d')}}">
-                  <div class="morning"><input type="radio" name="time" value="1" form="harvestform"><label for="">午前</label></div>
-                  <div class="afternoon"><input type="radio" name="time" value="2" form="harvestform"><label for="">午後</label></div>
-                @else
-                  <p>{{$calender->startDay->startOfMonth()->addDay($i)->day}}</p>
-                  <p>お休み</p>
-                @endif
-              </div>
-            </td>
+        </table>
         @if($calender->startDay->startOfMonth()->addDay($i) >= $calender-> endDay)
           @break
         @endif
-        @if($calender->startDay->startOfMonth()->addDay($i)->dayOfWeek == 6)
-          </tr>
-        @endif
       @endfor
-    </table>
     @endforeach
 
     @if ($errors->any())
