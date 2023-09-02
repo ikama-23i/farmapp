@@ -33,6 +33,12 @@ nav  a {
   text-decoration-color: rgb(246, 39, 146);
 }
 
+/* サクランボ狩りの予約開始部分に削除線を引く （2023年8月31日～）*/
+#newscherry {
+  text-decoration: line-through;
+  text-decoration-style: solid;
+  text-decoration-color: rgb(246, 39, 146);
+}
 
 /* コピーライトを調整 */
 footer {
