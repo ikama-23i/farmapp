@@ -48,7 +48,7 @@
           $month=$calender->startDay->startOfMonth()->month
         @endphp
       @endif
-      <h1>{{$key}}</h1>
+      <h1>柿狩り</h1>
       @for($event = 0;;$event++)
         <h1>{{ $month }}月（土日のみ）</h1>
         <table class="calender">
