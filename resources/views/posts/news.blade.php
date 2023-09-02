@@ -15,7 +15,7 @@
     <dl>
       <dt>2023.9.1</dt>
       <dd id="newspersimmon">柿狩りの予約を開始しました。</dd>
-      <div id="newspersimmoncoment"> 大変お待たせ致しました。 <br>柿狩りの予約が可能になりました。今年も多く実っております。<br><a href="{{ route('posts.harvest') }}">果物狩り【予約】</a> へご予約をお待ちしております。</div>
+      <div id="newspersimmoncoment"> 大変お待たせ致しました。 <br>柿狩りの予約が可能になりました。10月までの予約を開放しております。<br><a href="{{ route('posts.harvest') }}">果物狩り【予約】</a> へご予約をお待ちしております。</div>
     </dl>
     </article>
 
