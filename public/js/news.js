@@ -69,7 +69,7 @@ persimmonComent.addEventListener("click", (event) => {
   document.getElementById("newspersimmoncoment").style.display = "";
 });
 
-document.getElementById("article-news").addEventListener("click", () => {
+document.getElementById("article-news4").addEventListener("click", () => {
   
   document.getElementById("newspersimmoncoment").style.display = "none";
 });
